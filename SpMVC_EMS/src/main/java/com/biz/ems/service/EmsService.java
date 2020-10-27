@@ -11,10 +11,13 @@ public interface EmsService {
 	public List<EmsVO> selectAll();
 
 	public void insert(EmsVO emsVO);
-	public void insert(EmsVO emsVO,MultipartFile file);
+	public List<String> insert(EmsVO emsVO,MultipartFile file);
 	public List<String> insert(EmsVO emsVO, MultipartHttpServletRequest files);
 	
-	public EmsVO findBySeq(long long_seq);
-	public int delete(long long_seq);
+	public EmsVO findBySeq(long long_id);
+	public int delete(long long_id);
+
+	
+
 
 }
